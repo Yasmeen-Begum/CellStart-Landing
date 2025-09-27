@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	{
+		margin:0;
+		padding:0;
+		box-sizing: border-box;
+	}
+	body{
+		font-family: 'Source Sans Pro Regular';
+		color:#0057a6;
+		background:#e0f7fa;
+		margin:0;
+	}
+	p{
+		margin-left: 50px;
+}
+	h2{
+		font-family: 'Poppins SemiBold' ,Poppins Bold;
+		color:#002f5c;
+		background: peachbuff;
+		text-align: center;
+	}
+	.header{
+		display:flex;
+		font-family: 'Cabin SemiBold',Cabin Bold;
+		color:#002f5c;
+		background:linear-gradient(#002f5c,#e0f7fa,peachpuff);
+		padding:20px;
+		margin:0 0 0 0;
+	}
+		.header img{
+		width:150px;
+		padding: 5px;
+		height:45px;
+	}
+	
+	.cta-btn {
+	  margin-left: 50px;
+	  margin-top: 15px;
+	margin-bottom: 5px;
+      background: #e0f7fa;
+      color:#002f5c ;
+      font-family: 'Source Sans Pro Regular';
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      padding: 5px;
+      border: 2px solid peachpuff;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+	  text-decoration: none;
+    }
+    .cta-btn:hover {
+      color: #e0f7fa;
+	 background:#002f5c;
+    }
+	
+	.hero{
+		text-align: center;
+	}
+	
+	
+	.product-img{
+		margin-top:20px;
+		height:200px;
+		max-width:320px;
+		margin-left: auto;
+	    margin-right:auto;
+	    display:block;
+	}
+	.benefits{
+		margin-left: 15px;
+		text-align: center;
+	}
+	.benefits-text{
+		text-align: left;
+	
+	}
+	.infographic{
+		flex-wrap: wrap;
+		width:600px;
+		height: 300px;
+	}
+	.product-text{
+		 flex: 2 1 300px;
+		margin-left: 100px;
+	}
+	 .product-image {
+    flex: 1 1 200px;
+	float:right;
+	margin-right: 100px;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    line-height: inherit;
+  }
+	 .howitworks {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      gap: 28px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .howitworks-img {
+      flex: 1 1 150px;
+      min-width: 300px;
+      max-width: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .howitworks-text {
+      flex: 2 1 300px;
+      min-width: 260px;
+    }
+	 .Formula img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      height: auto;
+    }
+    .Formula {
+      text-align: center;
+    }
+	
+	.science img{
+	  display: block;
+      margin-left:auto;
+      margin-right: auto;
+	  width:500px;
+      max-width: 100%;
+      height: 300px;
+	}
+	.imagery-style h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.imagery-style p {
+  max-width: 200px;
+  
+}
+.imagery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imagery-block {
+  flex: 1 1 200px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.imagery-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.imagery-block h3 {
+  color: #002f5c;
+  margin-bottom: 8px;
+}
+	  form{
+		margin-left:30px;
+		float:left;
+	}
+.shopnow div{
+		float: right;
+		margin-right: 40px;
+	}
+	  .footer {
+  text-align: center;
+  padding: 10px;
+  background: #002f5c;
+  color:#0057a6;
+ margin-bottom: 0;
+ margin-top: 300px;
+	
+}
+	
+.footer-logo {
+  height: 35px;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+<section class="header">
+<img src="assets/logos/Slide 4 Logo 1.png" alt="cellstart logo">
+<a href="#shop" class="cta-btn">Shop Now</a>
+<a href="#Product" class="cta-btn">Learn More</a>
+<a href="#works" class="cta-btn">Discover The Formula</a>
+<a href="#formula" class="cta-btn">Fuel My Cell</a>
+
+</section>
+<section class="hero">
+<h1 id="main-headline">Why IS NAD<sup>+</sup>Your Cellular Fuel ?</h1>
+<div id="main-subtext"> Restore your cellular energy and vitality.</div>
+<img src="assets/product/Slide 4 Product.png" alt="Bottle" class="product-img">
+</section>
+<script>
+	const headlines=[
+		"Why Is NAD<sup>+</sup> You Cellular Fuel",
+		"Unlock Your Potential",
+	];
+	const subtexts=[
+		"Restore Your cellular energy and vitality",
+		"The key to a more vibrant you lies in your cells",
+	];
+	let idx=0;
+	const headlineE1=document.getElementById("main-headline");
+	const subtextE1=document.getElementById("main-subtext");
+	setInterval(() => {
+		idx =( idx + 1) % headlines.length;
+		headlineE1.innerHTML=headlines[idx];
+		subtextE1.textContent=subtexts[idx];
+	},4000);
+	</script>
+	<br><br>
+	
+<section class="benefits">
+	<h2>Why Choose choroNAD<sup>+</sup>?</h2>
+	<br>
+	<p class="benefits-text">
+	-Backed by science :Resveratrol + NAD<sup>+</sup> can raise NAD<sup>+</sup> levels up to 1.7x
+		higher than NAD<sup>+</sup> alone.<br><br>
+	-Feel vibrant and energized as your cells regain youthful function.<br><br>
+	-Easy once-daily supplement-maximum cellular support ,minimum effort.
+	</p><br><br>
+    <img src="assets/infographics/Slide 8 Infographic 1.gif" class="infographic"></img><br><br>
+	</section><br><br>
+
+     
+<section id="Product" class="product-description">
+<h2>ChronoNAD<sup>+</sup> Product Description</h2><br><br>	
+	<img src="assets/product/Slide 4 Product.png" alt="Product image" class="product-image">
+<div class="product-text">
+      -ChronoNAD+ is a dietary supplement taken<br><br>
+once a day. As we age, our NAD+ levels<br><br>
+decline, impacting our cellular health and<br><br>
+energy. Our supplement is designed to<br><br>
+restore these levels, helping you feel more<br><br>
+vibrant and energized.
+</div>
+</section><br><br><br><br><br>
+
+<section id="formula" class="Formula">
+	<h2>Why Is NAD+ You Cellular Fuel</h2><br>
+	<img src="assets/infographics/Slide 7 Infographic 1.png">
+	</section><br><br><br>
+
+<section>
+    <div id="works" class="howitworks">
+      <img
+        src="assets/infographics/Slide 8 Infographic 2.gif"
+        class="howitworks-img"
+        alt="How ChronoNAD+ Works"
+      />
+      <div class="howitworks-text">
+        <h2>How it Works</h2><br>
+        <div>
+         ChronoNAD<sup>+</sup> delivers a specialized blend of NAD<sup>+</sup> precursors and Resveratrol,<br><br>working together to restore and maintain optimal cellular energy.<br><br>
+          As NAD<sup>+</sup> levels naturally decline with age, replenishment is key to combating cellular <br><br>fatigue, supporting DNA repair, and empowering long-term vitality.Slow the signs of cellular aging.
+        </div>
+      </div>
+    </div>
+  </section>
+<br><br><br><br><br><br><br>
+	
+<section id="science" class="science">
+    <h2>The Science Behind ChronoNAD+</h2>
+    <p>NAD+ levels naturally decline as we age, affecting cellular energy and repair. ChronoNAD+ is designed to restore these levels for optimal vitality.</p>
+      <img src="assets/infographics/Slide 6 Infographic 2.png" alt="Infographic 2">
+  </section><br><br><br>
+
+<h2>Our Visual Philosophy</h2>
+  <p>CellStart blends clinical credibility with authentic lifestyle photography. We use science visuals sparingly, focusing instead on real users and diverse ambassadors to build trust and relatability.</p>
+
+  <section class="imagery-grid">
+    <div class="imagery-block">
+      <img src="assets/images/image2.png" alt="Luxury Skincare Style" />
+      <h3>Luxury / Premium</h3>
+      <p>Elevating your everyday skincare routine with serene, high-end visuals.</p>
+    </div>
+    <div class="imagery-block">
+      <img src="assets/images/image1.png" alt="Bold Wellness Style" />
+      <h3>Bold Wellness</h3>
+      <p>Playful, expressive imagery that speaks with attitude—because wellness should be fun.</p>
+    </div>
+    <div class="imagery-block">
+      <img src="assets/images/image3.png" alt="Authentic Lifestyle Style" />
+      <h3>Authentic & Inclusive</h3>
+      <p>Real people. Real moments. We celebrate diversity and connection in every frame.</p>
+    </div>
+  </div>
+</section>
+
+<section id="shop" class="shopnow">
+	<h2>Contact Us</h2>
+	<form>
+	Name    <input type="text"><br><br>
+	Email   <input type="text"><br><br>
+	Ph.no   <input type="text"><br><br>
+	Message <textarea rows="4"></textarea><br><br>
+	<button value="submit" class="cta-btn">Send Message</button><br><br>
+	</form>
+		<div><b>
+		Company:CellStart<br><br>
+		Email:Cellstart123@gmail.com<br><br>
+		PhNo:+91 2984885576<br><br>
+		Location: 12-345-2 ,Ottawa,Canada-57994</b><br><br>
+		</div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="assets/logos/Slide 4 Logo 2.png" alt="CellStart Logo" class="footer-logo">
+    <p>© 2025 CellStart. All Rights Reserved.</p>
+  </footer>
+
+
+
+</body>
+</html>
